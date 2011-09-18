@@ -25,7 +25,7 @@ Pixel* Snake::allocatePixel(uint8_t row, uint8_t col) {
   return p;
 }
 
-bool Snake::move(uint8_t direction) {
+uint8_t Snake::move(uint8_t direction) {
   uint8_t nextPosition[2];
   uint8_t nextPositionColor;
 
@@ -58,14 +58,13 @@ bool Snake::move(uint8_t direction) {
 
   switch (nextPositionColor) {
     case RED:
-      return false;
-      break;
+      return 0;
     case GREEN:
       growTo(nextPosition[0], nextPosition[1]);
-      break;
+      return 1;
     default:
       moveTo(nextPosition[0], nextPosition[1]);
-      break;
+      return 2;
   }
   return true;
 }

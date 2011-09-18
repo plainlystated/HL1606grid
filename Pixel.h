@@ -18,6 +18,7 @@ class Pixel {
     void copy(Pixel *p);
     uint8_t color;
     uint8_t row, col;
+    uint8_t marker;
 };
 
 #endif

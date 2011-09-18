@@ -13,7 +13,7 @@
 class Grid {
   public:
     Grid(HL1606strip *strip);
-    Pixel pixels[8][5];
+    Pixel pixels[8][8];
     HL1606strip *strip;
     uint8_t rows;
     uint8_t cols;
@@ -23,7 +23,6 @@ class Grid {
     void setLEDcolor(uint8_t row, uint8_t col, uint8_t color);
     uint8_t getLEDcolor(uint8_t row, uint8_t col);
     void clear();
-    void setRandomPixel(uint8_t color);
 };
 
 #endif

@@ -14,7 +14,7 @@ class Snake {
     Snake(Grid *g);
     Grid *grid;
     Pixel *pixels[64];
-    bool move(uint8_t direction);
+    uint8_t move(uint8_t direction);
     void moveTo(uint8_t row, uint8_t col);
     void growTo(uint8_t row, uint8_t col);
     bool moveUp();

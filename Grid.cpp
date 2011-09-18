@@ -7,24 +7,8 @@
 
 Grid::Grid(HL1606strip *s) {
   rows = 8;
-  cols = 5;
+  cols = 8;
   strip = s;
-}
-
-void Grid::setRandomPixel(uint8_t color) {
-  uint8_t attempts = 0;
-
-  while (attempts < 2) {
-    uint8_t r = random(rows);
-    uint8_t c = random(cols);
-    if (getLEDcolor(r, c) == BLACK) {
-      setLEDcolor(r, c, color);
-      return;
-    } else {
-      Serial.println("setRandomPixel collision..  trying again");
-      attempts += 1;
-    }
-  }
 }
 
 void Grid::fill(uint8_t color) {
