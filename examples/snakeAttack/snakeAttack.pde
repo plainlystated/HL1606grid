@@ -99,52 +99,18 @@ void snakeGrid() {
         uint8_t c = random(grid.cols);
         c = random(grid.cols);
         c = random(grid.cols);
-Serial.print(random(grid.rows), 10);
-Serial.print(random(grid.rows), 10);
-Serial.print(random(grid.rows), 10);
-Serial.print(random(grid.cols), 10);
-Serial.print(random(grid.cols), 10);
-Serial.print(random(grid.cols), 10);
-Serial.print("(");
         uint8_t r = random(grid.rows);
-Serial.print(r, 10);
-Serial.print(",");
         r = random(grid.rows);
-Serial.print(r, 10);
-Serial.print(",");
         r = random(grid.rows);
-Serial.print(r, 10);
-Serial.print(random(grid.rows));
-Serial.print(",");
-Serial.print(random(grid.rows));
-Serial.print(",");
-Serial.print(random(grid.rows));
-Serial.print(",");
-Serial.print(random(grid.rows));
-Serial.print(",");
-Serial.print(r, 10);
-Serial.print(",");
-Serial.print(c, 10);
-Serial.println(")");
         if (grid.getLEDcolor(r, c) == BLACK) {
           
           Serial.print("setRandomPixel ok @ [");
           apples[appleCount] = &Pixel(r, c);
           apples[appleCount]->marker = random(15) + 15;;
           appleCount++;
-Serial.print(r, 10);
-Serial.print(",");
-Serial.print(c, 10);
-Serial.print("] appleCount: ");
-Serial.print(appleCount, 10);
-Serial.println();
           break;
         } else {
           Serial.print("setRandomPixel collision @ [");
-Serial.print(r, 10);
-Serial.print(",");
-Serial.print(c, 10);
-Serial.println("]");
           attempts += 1;
         }
       }
@@ -158,7 +124,6 @@ Serial.println("]");
             apples[j] = apples[j+1];
           }
           i--;
-Serial.println("decrementing appleCount");
           appleCount--;
         } else {
           grid.setLEDcolor(apples[i]->row, apples[i]->col, GREEN);
@@ -192,13 +157,6 @@ Serial.println("decrementing appleCount");
     Serial.println();
   }
 }
-
-/*void moveSnake(uint8_t* snake, uint8_t snakeSize) {*/
-/*  for (uint8_t snakeLED=0; snakeLED<snakeSize-1; snakeLED++) {*/
-/*    snake[snakeSize-snakeLED][0] = snake[snakeSize-snakeLED+1][0];*/
-/*    snake[snakeSize-snakeLED][0] = snake[snakeSize-snakeLED+1][1];*/
-/*  }*/
-/*}*/
 
 void blocksAcross() {
   uint8_t row = 0;
