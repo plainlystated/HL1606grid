@@ -1,5 +1,5 @@
 /*
- * Grid - Abstraction of 2 dimentional pixels on HL1606 LED strips
+ * HL1606grid - Abstraction of 2 dimentional pixels on HL1606 LED strips
  * Copyright (c) 2011, Patrick Schless
  */
 

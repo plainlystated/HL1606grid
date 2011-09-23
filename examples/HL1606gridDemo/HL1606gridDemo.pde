@@ -20,8 +20,40 @@ void setup(void) {
 }
 
 void loop() {
+  patterns(1000);
   blocksAcross(50);
   snake(3, 20);
+}
+
+void patterns(int duration) {
+  for (uint8_t row=0; row<grid.rows; row++) {
+    if (row % 3 == 0) {
+      for (uint8_t col=0; col<grid.cols; col++) {
+        grid.setLEDcolor(row, col, RED);
+      }
+    }
+  }
+  grid.writeGrid();
+  delay(duration);
+  grid.clear();
+
+  for (uint8_t col=0; col<grid.cols; col++) {
+    if (col % 2 == 0) {
+      for (uint8_t row=0; row<grid.rows; row++) {
+        grid.setLEDcolor(row, col, RED);
+      }
+    }
+  }
+  grid.writeGrid();
+  delay(duration);
+  grid.clear();
+
+  for (uint8_t i=0; i<grid.rows; i++) {
+    grid.setLEDcolor(i, i, RED);
+    grid.setLEDcolor(grid.cols-i-1, i, RED);
+  }
+  grid.writeGrid();
+  delay(duration);
 }
 
 void blocksAcross(uint8_t duration) {
