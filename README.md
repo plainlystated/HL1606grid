@@ -1,10 +1,12 @@
 # HL1606grid - Addressable matrix of LEDs
 
-A library to control a matrix built out of HL1606-based LED strips. Depends on [adafruit's HL1606strip library](https://github.com/adafruit/HL1606-LED-Strip) (must be installed separately, in libraries/).
-
-This library allows you to set individual LED colors in the grid.
+A library to control a matrix built out of HL1606-based LED strips. You set individual LED colors in the grid, then write them all out at once.
 
 This library doesn't have any PWM support, it's just for primary colors.
+
+## Dependencies
+
+Depends on [adafruit's HL1606strip library](https://github.com/adafruit/HL1606-LED-Strip) (must be installed separately, in libraries/).
 
 ## To download
 
@@ -17,3 +19,23 @@ Click DOWNLOADS in the top right (or clone).
 2. Extract (or clone) the library to libraries/HL1606grid/
 
 3. Restart your Arduino IDE
+
+## Example Code
+
+The library comes with example code. To run it, go to (in the Arduino IDE):
+
+1. File
+
+2. Examples
+
+3. HL1606grid
+
+4. HL1606gridDemo
+
+(Then compile and run)
+
+## Troubleshooting
+
+* If you don't have HL1606strip under examples, then you didn't install the required dependency correctly.
+
+* If you don't have HL1606grid under examples, then you didn't install this library correctly.
