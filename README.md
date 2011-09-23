@@ -10,7 +10,7 @@ This library doesn't have any PWM support, it's just for primary colors.
 
 Click DOWNLOADS in the top right (or clone).
 
-## To install:
+## To install
 
 1. Make sure you have a "libraries" directory in your arduino directory
 
