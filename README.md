@@ -2,6 +2,8 @@
 
 A library to control a matrix built out of HL1606-based LED strips. You set individual LED colors in the grid, then write them all out at once.
 
+To see it in action (or get more detailed info), check out [the blog about it](http://www.plainlystated.com/2011/09/addressable-led-grid/).
+
 This library doesn't have any PWM support, it's just for primary colors.
 
 ## Dependencies
