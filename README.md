@@ -6,13 +6,14 @@ This library allows you to set individual LED colors in the grid.
 
 This library doesn't have any PWM support, it's just for primary colors.
 
----
+## To download
 
-To download, click DOWNLOADS in the top right (or clone).
+Click DOWNLOADS in the top right (or clone).
 
---
+## To install:
 
-To install:
 1. Make sure you have a "libraries" directory in your arduino directory
-2. extract (or clone) the library to libraries/HL1606grid
-3. restart your Arduino IDE
+
+2. Extract (or clone) the library to libraries/HL1606grid/
+
+3. Restart your Arduino IDE
