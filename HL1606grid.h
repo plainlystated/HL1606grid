@@ -10,9 +10,9 @@
 #include "Pixel.h";
 #include "HL1606strip.h";
 
-class Grid {
+class HL1606grid {
   public:
-    Grid(HL1606strip *strip);
+    HL1606grid(HL1606strip *strip);
     Pixel pixels[8][8];
     HL1606strip *strip;
     uint8_t rows;
